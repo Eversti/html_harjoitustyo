@@ -97,7 +97,8 @@ img {
 }
 
 audio {
-  padding-left: 25%;
+  position: absolute;
+  left: 25%;
   width: 50%;
-  padding-top: 45%;
+  top: 90%;
 }
