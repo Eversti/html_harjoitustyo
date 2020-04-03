@@ -58,8 +58,14 @@ export default class Game extends Component {
                 if(winner){
                     return;
                 }
-                this.enemy(); 
+                for(var i = 0; i < squares.length; i++){
+                    if(squares[i] === null){
+                        this.enemy();
+                        return; 
+                    }
+                }
             }
+
             if(this.state.gamemode === "Kaksinpeli"){
                 squares[i] = this.state.xIsNext ? 'X' : 'O';
                 this.setState({
@@ -111,7 +117,7 @@ export default class Game extends Component {
                 <img class="gaming" src={'./gaming.png'}></img>
                 <img class="epic" src={'./epic.png'}></img>
                 <audio controls>
-                    <source src="cum.mp3" type="audio/mpeg"/>
+                    <source src="candyland.mp3" type="audio/mpeg"/>
                 </audio>
                 <div class="game-board">
                 <div>
